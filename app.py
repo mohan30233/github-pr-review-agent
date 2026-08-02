@@ -187,7 +187,7 @@ if review_clicked:
     st.markdown("""
     <div style="text-align:center; color:#64748B; padding:20px;">
 
-    Built with ❤️ using Python, Streamlit, Groq & GitHub API
+    Built using Python, Streamlit, Groq & GitHub API
 
     <br><br>
 
