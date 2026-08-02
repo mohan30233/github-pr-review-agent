@@ -6,8 +6,15 @@ from groq import Groq
 
 load_dotenv()
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+import streamlit as st
 
+key = os.getenv("GROQ_API_KEY")
+
+st.write("Key loaded:", key is not None)
+st.write("Length:", len(key) if key else 0)
+st.write("Prefix:", key[:4] if key else "None")
+
+client = Groq(api_key=key)
 
 def review_patch(filename, patch, model):
     prompt = f"""
